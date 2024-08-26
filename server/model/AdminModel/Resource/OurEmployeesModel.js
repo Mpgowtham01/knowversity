@@ -1,0 +1,61 @@
+import mongoose from "mongoose";
+
+const { Schema, model } = mongoose;
+
+const OurEmployees = new Schema({
+  DEGREEyop: String,
+  EmployeeId: String,
+  ExpCompanyName: String,
+  ExpFromDate: String,
+  ExptoDate: String,
+  aadharNumber: String,
+  address: String,
+  alternativeNumber: String,
+  cityValue: String,
+  country: String,
+  dateofBirth:String,
+  degreeboard: String,
+  degreeper: String,
+  degrees: String,
+  designation: String,
+  district: String,
+  doj: String,
+  email: String,
+  employerPasswordNumber: String,
+  employerUserName: String,
+  firstname: String,
+  gboard: String,
+  gender: String,
+  gmajor: String,
+  gper: String,
+  gyop: String,
+  lastname: String,
+  maritalstatus: String,
+  masmajor: String,
+  mmajor: String,
+  panNumber: String,
+  passportExpiryDate: String,
+  passportIssueDate: String,
+  passportNumber: String,
+  pgboard: String,
+  pgper: String,
+  pgyop: String,
+  phoneNumber: String,
+  pincode: String,
+//   resume: String,
+  stateValue: String,
+//   uploadPhoto: String,
+  xboard: String,
+  xiiboard: String,
+  xiimajor: String,
+  xiiper: String,
+  xiiyop: String,
+  xmajor: String,
+  xper: String,
+  xyop: String,
+});
+
+const OurEmployeesDB = model("ResourceOurEmployees", OurEmployees);
+OurEmployeesDB.createIndexes();
+
+export default OurEmployeesDB;
