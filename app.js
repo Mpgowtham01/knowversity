@@ -19,10 +19,8 @@ import ourEmployee from "./server/routes/AdminRoutes/Resource/OurEmployeeRouter.
 import ContactorStaffing from "./server/routes/AdminRoutes/Resource/ContactorStaffingRouter.js";
 import contactus from "./server/routes/contactusRoutes.js";
 
-
 import trainingCourse from "./server/routes/AdminRoutes/TrainingCourseRouter.js";
 import Curriculum from "./server/routes/AdminRoutes/CurriculumRouter.js";
-
 
 // adminLogo
 import AdminLogo from "./server/routes/AdminLogoRoute.js";
@@ -50,7 +48,7 @@ import gender from "./server/routes/StudentRoutes/StudentRouter.js";
 import marital from "./server/routes/StudentRoutes/StudentRouter.js";
 import mode from "./server/routes/StudentRoutes/StudentRouter.js";
 import studentBlog from "./server/routes/StudentRoutes/StudentRouter.js";
-import studentQualify from "./server/routes/StudentRoutes/StudentRouter.js"
+import studentQualify from "./server/routes/StudentRoutes/StudentRouter.js";
 //employer
 import ourProfile from "./server/routes/employerRoute/OurProfileRoute.js";
 import createForm from "./server/routes/employerRoute/CreateJobRoute.js";
@@ -113,13 +111,12 @@ import CollegeList from "./server/routes/CollegeRoutes/CollegeListRoute.js";
 import University from "./server/routes/CollegeRoutes/UniversityRoute.js";
 import Autonomous from "./server/routes/CollegeRoutes/AutonomousRoute.js";
 import collegeProfile from "./server/routes/CollegeRoutes/collegeProfile.js";
-import Seminor from "./server/routes/CollegeRoutes/SeminorRoutes.js";
 
 import Student from "./server/routes/AdminRoutes/Studentrouter.js";
 
 //Trainer
-import ProfessionalDetails from "./server/routes/TrainerRoutes/TrainerDetailsRoutes.js"
-import courseNotification from "./server/routes/NotificationRoutes/courseNotificationRoutes.js"
+import ProfessionalDetails from "./server/routes/TrainerRoutes/TrainerDetailsRoutes.js";
+import courseNotification from "./server/routes/NotificationRoutes/courseNotificationRoutes.js";
 
 //offer
 
@@ -131,7 +128,7 @@ import Internship from "./server/routes/employerRoute/InternshipRoutes.js";
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 app.use(express.static(path.join(__dirname, "public")));
-app.use(express.static('public'));
+app.use(express.static("public"));
 import mobile_route from "./server/mobile/routes/image_route.js";
 import path from "path";
 //RN mobile route
@@ -148,7 +145,7 @@ import Trainer from "./server/routes/Exam/TrainerRoutes.js";
 //signup
 app.use("/signup", signup);
 app.use("/employee", employee);
-app.use("/trainer",Trainersignup)
+app.use("/trainer", Trainersignup);
 app.use("/employer", employer);
 app.use("/institute", institute);
 app.use("/college", College);
@@ -213,7 +210,7 @@ app.use("/companylist", CompanyList);
 app.use("/profdetails", ProfDetails);
 
 //Trainer
-app.use("/trainerinfo",ProfessionalDetails);
+app.use("/trainerinfo", ProfessionalDetails);
 app.use("/notification", courseNotification);
 
 // blog
@@ -238,8 +235,7 @@ app.use("/areaofinterest", Areaofinterest);
 app.use("/fields", Fileds);
 app.use("/ResourceOurEmployee", ourEmployee);
 app.use("/ResourceContactorStaffing", ContactorStaffing);
-app.use("/contactus",contactus);
-
+app.use("/contactus", contactus);
 
 app.use("/courses", trainingCourse);
 app.use("/curriculum", Curriculum);
